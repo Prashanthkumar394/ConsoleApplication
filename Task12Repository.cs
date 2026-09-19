@@ -6,7 +6,6 @@ class CountryRepository
     private string connectionString =
         "Host=localhost;Port=5432;Database=postgres;Username=postgres;Password=postgres";
 
-    // CREATE
     public void AddCountry(string name)
     {
         using (NpgsqlConnection con = new NpgsqlConnection(connectionString))
@@ -28,7 +27,6 @@ class CountryRepository
         }
     }
 
-    // READ
     public void ViewCountries()
     {
         using (NpgsqlConnection con = new NpgsqlConnection(connectionString))
@@ -57,7 +55,6 @@ class CountryRepository
         }
     }
 
-    // UPDATE
     public void UpdateCountry(int id, string name)
     {
         using (NpgsqlConnection con = new NpgsqlConnection(connectionString))
@@ -84,7 +81,6 @@ class CountryRepository
         }
     }
 
-    // DELETE
     public void DeleteCountry(int id)
     {
         using (NpgsqlConnection con = new NpgsqlConnection(connectionString))
